@@ -84,7 +84,6 @@ A Node.js RESTful API for user, admin, product, cart, order, payment, address, a
 - `DELETE /otp/clear/:userId` — Clear OTPs for user
 - `GET    /products` — List all products (public)
 - `GET    /products/:id` — Get product details (public)
-- `GET    /health` — Health check
 
 ### User Endpoints (require authentication)
 - `POST   /auth/logout` — Logout user
