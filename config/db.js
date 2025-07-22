@@ -24,12 +24,12 @@ const sequelize = new Sequelize(
 const testConnection = async () => {
   try {
     await sequelize.authenticate();
-    console.log('✅ Database connection established successfully.');
-    console.log(`   Database: ${config.dialect}://${config.host}:${config.port}/${config.database}`);
-    console.log(`   User: ${config.username}`);
+    console.log('Database connection established successfully.');
+    console.log(`Database: ${config.dialect}://${config.host}:${config.port}/${config.database}`);
+    console.log(`User: ${config.username}`);
     return true;
   } catch (error) {
-    console.error('❌ Unable to connect to the database:', error);
+    console.error('Unable to connect to the database:', error);
     return false;
   }
 };
@@ -38,10 +38,10 @@ const testConnection = async () => {
 const syncDatabase = async (force = false) => {
   try {
     await sequelize.sync({ force });
-    console.log('✅ Database synchronized successfully.');
+    console.log('Database synchronized successfully.');
     return true;
   } catch (error) {
-    console.error('❌ Database synchronization failed:', error);
+    console.error('Database synchronization failed:', error);
     return false;
   }
 };
@@ -50,10 +50,10 @@ const syncDatabase = async (force = false) => {
 const closeConnection = async () => {
   try {
     await sequelize.close();
-    console.log('✅ Database connection closed successfully.');
+    console.log('Database connection closed successfully.');
     return true;
   } catch (error) {
-    console.error('❌ Error closing database connection:', error);
+    console.error('Error closing database connection:', error);
     return false;
   }
 };
