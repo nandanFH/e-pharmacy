@@ -249,5 +249,3 @@ module.exports = {
   addForUser,
   update
 }; 
-
-console.log("hello world")
