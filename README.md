@@ -23,8 +23,7 @@ A Node.js RESTful API for user, admin, product, cart, order, payment, address, a
 - **Order Management**: Place orders, view order history, admin can manage all orders and place orders for users.
 - **Payment Processing**: Process and view payments for orders.
 - **Address Management**: Add, update, delete, and view addresses for users and admins.
-- **OTP Services**: Send, verify, reset password, get status/history, clear OTPs.
-- **Health Check**: `/health` endpoint for uptime and status.
+- **OTP Services**: Send, verify, reset password, get status/historys.
 
 ---
 
@@ -44,8 +43,17 @@ A Node.js RESTful API for user, admin, product, cart, order, payment, address, a
    ```bash
    npm install
    ```
-3. Configure environment variables:
-   - Copy `.env.example` to `.env` and fill in your database and secret values.
+3. Create a `.env` file with your database and JWT settings:
+   ```env
+   DB_USER=your_mysql_user
+   DB_PASSWORD=your_mysql_password
+   DB_NAME=your_database_name
+   DB_HOST=localhost
+   DB_PORT=3306
+   JWT_SECRET=your_jwt_secret
+   NODE_ENV=development
+   PORT=4000
+   ```
 4. Run database migrations (if any):
    ```bash
    # Example (if using sequelize-cli)
