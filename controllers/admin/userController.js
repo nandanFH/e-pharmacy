@@ -24,7 +24,7 @@ const list = async (req, res) => {
         { email: { [Op.like]: `%${search}%` } }
       ];
     }
-
+    
     const count = await User.count({ where: whereClause, transaction: t });
     const users = await User.findAll({
       where: whereClause,
