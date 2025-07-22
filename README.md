@@ -37,7 +37,7 @@ A Node.js RESTful API for user, admin, product, cart, order, payment, address, a
 1. Clone the repository:
    ```bash
    git clone <repo-url>
-   cd healio-cp2
+   cd healio
    ```
 2. Install dependencies:
    ```bash
